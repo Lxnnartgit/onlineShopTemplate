@@ -66,6 +66,8 @@ An online shop web application built with **Node.js**, **Express.js**, and **Mon
 
 ## Usage
 
+To access the Website visit: https://onlineshoptemplate.onrender.com
+
 ### Routes Overview
 
 #### User Routes
