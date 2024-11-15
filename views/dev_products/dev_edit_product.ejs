@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <link rel="stylesheet" href="/assets/style.css">
+<body>
+    <header>
+        <nav>
+            <h1>Modern Shop</h1>
+            <ul>
+                <li><a href="/">Go back to normal mode</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/about">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <main>
+    <h2>Edit a product</h2>
+
+    <form action="/dev_products/<%= product.slug %>" method="POST">
+      <input type="text" value="<%= product.name %>" name="name" placeholder="name" /><br />
+      <input type="text" value="<%= product.slug %>" name="slug" placeholder="slug" /><br />
+      <input type="number" value="<%= product.price %>" name="price" placeholder="price" /><br />
+      <button>Save</button>
+    </form>
+  </main>
+
+</body>
+</html>

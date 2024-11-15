@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('includes/head'), {tittle: 'Shop - About'} %>
+<body>
+
+ <%- include('includes/header_nav') %>
+
+    <section class="about">
+        <h2>About Us</h2>
+        <p>Modern Shop is dedicated to providing high-quality, elegant products that suit any lifestyle.</p>
+    </section>
+    <section>
+        <h1>Contact</h1>
+        
+        <form action="/contact" method="POST">
+          <input type="email" name="email" placeholder="email" /><br />
+          <textarea name="message" placeholder="message"></textarea><br />
+    
+          <button>Send</button>
+        </form>
+</section>
+</body>
+</html>

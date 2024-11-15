@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+ <%- include('includes/head'), {title: 'Shop - Main'} %>
+<body>
+
+<%- include('includes/header_nav') %>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Modern Shop</h2>
+            <p>Where Elegance Meets Quality</p>
+            <a href="product.html" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    
+    <section class="featured-products">
+        <h3>Best Sellers</h3>
+        <section class="shop">
+            <h2>Shop Our Collection</h2>
+            <br>
+            <h3>Our current collection contains these <%= productCount %> Items: </h3>
+            <br>
+            <div class="products-grid">
+               
+                <% products.forEach(product => { %>
+    
+                    <div class="product-card">
+                        <img src="/assets/src/<%= imgCheckIfEmpty(product.img) %>" alt="Product 1">
+                        <h4>
+                        <a href="/products/<%= product.slug %>"><%= product.name %> </a>
+                        </h4>
+                            <p><%= product.price %></p> <!-- ADD Product price and pictures here with database-->
+                        <% if(product.isInStock) { %> 
+                            <button class="btn">Add to Cart</button>
+                        <% } else { %>
+                            <br> 
+                          [SOLD OUT] 
+                         <% } %>
+                    </div>
+                  <% }) %>
+    
+            </div>
+        </section>
+    </section>
+</body>
+</html>

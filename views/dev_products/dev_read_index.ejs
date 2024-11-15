@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+        <h1>Modern Shop</h1>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/about">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+  <main>
+    <p>Our current offering:</p>
+    <ul>
+      <% products.forEach(product => { %>
+        <li>
+          <% if(product.isInStock) { %> 
+            <a href="/dev_products/<%= product.slug %>"><%= product.name %>: <%= product.price %></a>
+          <% } else { %>
+            <%= product.name %> [SOLD OUT] 
+          <% } %>
+        </li>
+      <% }) %>
+    </ul>
+  </main>
+
+</body>
+</html>

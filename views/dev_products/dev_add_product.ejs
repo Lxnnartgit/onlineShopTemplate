@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../includes/head', {title: 'Shop - dev add product'}) %>
+<link rel="stylesheet" href="/assets/style.css">
+
+<body>
+<%- include('../includes/header_nav_dev') %>
+
+  <main>
+    <h2>Welcome to the developer tool</h2>
+    <h3>Please add a product to the database</h3>
+
+    <form action="/dev_products/dev_add_product" method="POST">
+      <input type="text" name="name" placeholder="name" required /><br />
+      <input type="text" name="slug" placeholder="slug" required /><br />
+      <input type="number" name="price" placeholder="price" required min="0" step="1" /><br />
+      <button>Save</button>
+    </form>
+  </main>
+
+</body>
+</html>
